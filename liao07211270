@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>歡迎來到我們的餐廳</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,11 +21,13 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section id="about">
             <h2>關於我們</h2>
             <p>我們的餐廳提供精緻的餐點，融合了本地和國際風味。我們致力於為顧客提供最好的用餐體驗。</p>
+            <!-- 圖片欄位 -->
+            <img src="images/restaurant.jpg" alt="餐廳照片" class="responsive-img">
         </section>
 
         <section id="menu">
@@ -43,6 +47,8 @@
                 <li>起司蛋糕 - $150</li>
                 <li>巧克力布朗尼 - $120</li>
             </ul>
+            <!-- 菜單圖片欄位 -->
+            <img src="images/dishes.jpg" alt="菜品展示" class="responsive-img">
         </section>
 
         <section id="hours">
@@ -55,6 +61,8 @@
             <h2>我們的位置</h2>
             <p>地址：台北市信義區市府路1號</p>
             <p><a href="https://www.google.com/maps">查看地圖</a></p>
+            <!-- 地圖圖片欄位 -->
+            <img src="images/map.jpg" alt="地圖展示" class="responsive-img">
         </section>
 
         <section id="contact">
@@ -69,4 +77,3 @@
     </footer>
 </body>
 </html>
-
