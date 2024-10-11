@@ -26,7 +26,7 @@
         <section id="about">
             <h2>關於我們</h2>
             <p>我們的餐廳提供精緻的餐點，融合了本地和國際風味。我們致力於為顧客提供最好的用餐體驗。</p>
-            <!-- 圖片欄位 -->
+            <!-- 餐廳照片 -->
             <img src="images/restaurant.jpg" alt="餐廳照片" class="responsive-img">
         </section>
 
@@ -47,7 +47,7 @@
                 <li>起司蛋糕 - $150</li>
                 <li>巧克力布朗尼 - $120</li>
             </ul>
-            <!-- 菜單圖片欄位 -->
+            <!-- 菜單照片 -->
             <img src="images/dishes.jpg" alt="菜品展示" class="responsive-img">
         </section>
 
@@ -61,19 +61,8 @@
             <h2>我們的位置</h2>
             <p>地址：台北市信義區市府路1號</p>
             <p><a href="https://www.google.com/maps">查看地圖</a></p>
-            <!-- 地圖圖片欄位 -->
+            <!-- 地圖圖片 -->
             <img src="images/map.jpg" alt="地圖展示" class="responsive-img">
         </section>
 
-        <section id="contact">
-            <h2>聯絡我們</h2>
-            <p>聯絡電話：123-456-789</p>
-            <p>電子郵件：restaurant@example.com</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 [餐廳名稱]. 保留所有權利。</p>
-    </footer>
-</body>
-</html>
+       
