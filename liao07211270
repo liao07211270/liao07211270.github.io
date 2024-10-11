@@ -27,7 +27,7 @@
             <h2>關於我們</h2>
             <p>我們的餐廳提供精緻的餐點，融合了本地和國際風味。我們致力於為顧客提供最好的用餐體驗。</p>
             <!-- 餐廳照片 -->
-            <img src="images/restaurant.jpg" alt="餐廳照片" class="responsive-img">
+            <img src="images/下載(1).jpg" alt="餐廳照片" class="responsive-img">
         </section>
 
         <section id="menu">
@@ -37,11 +37,11 @@
                 <ul class="menu-list">
                     <li>
                         <span>和風沙拉佐胡麻醬 - $100</span>
-                        <img src="images/salad.jpg" alt="沙拉" class="menu-img">
+                        <img src="images/160823-2825-4-OHSkN.jpg" alt="沙拉" class="menu-img">
                     </li>
                     <li>
                         <span>時令湯品 - $80</span>
-                        <img src="images/soup.jpg" alt="湯品" class="menu-img">
+                        <img src="images/shutterstock_568845874.jpg" alt="湯品" class="menu-img">
                     </li>
                 </ul>
             </div>
@@ -51,11 +51,11 @@
                 <ul class="menu-list">
                     <li>
                         <span>爐烤牛排佐馬鈴薯泥 - $500</span>
-                        <img src="images/steak.jpg" alt="烤牛排" class="menu-img">
+                        <img src="images/1716788761224096779.jpg" alt="烤牛排" class="menu-img">
                     </li>
                     <li>
                         <span>義大利麵佐紅醬 - $300</span>
-                        <img src="images/pasta.jpg" alt="義大利麵" class="menu-img">
+                        <img src="images/photo.jpg" alt="義大利麵" class="menu-img">
                     </li>
                 </ul>
             </div>
@@ -65,11 +65,11 @@
                 <ul class="menu-list">
                     <li>
                         <span>起司藍莓蛋糕 - $150</span>
-                        <img src="images/cheesecake.jpg" alt="起司蛋糕" class="menu-img">
+                        <img src="images/1640534679-3466390588-g.jpg" alt="起司蛋糕" class="menu-img">
                     </li>
                     <li>
                         <span>巧克力布朗尼 - $120</span>
-                        <img src="images/brownie.jpg" alt="巧克力布朗尼" class="menu-img">
+                        <img src="images/下載.jpg" alt="巧克力布朗尼" class="menu-img">
                     </li>
                 </ul>
             </div>
@@ -101,3 +101,4 @@
     </footer>
 </body>
 </html>
+
