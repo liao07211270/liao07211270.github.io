@@ -1,10 +1,24 @@
-/* 全局樣式 */
+/* 全局樣式 - 使用 Noto Sans 字體 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
+}
+
+/* 標題和段落的字體樣式 */
+h1, h2, h3 {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    color: #343a40;
+}
+
+p {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #555;
 }
 
 /* 頁首樣式 */
@@ -86,13 +100,13 @@ ul li {
     border-bottom: none;
 }
 
-/* 營業時間樣式 */
+/* 營業時間與位置樣式 */
 #hours p, #location p {
     font-size: 1.2em;
     margin: 5px 0;
 }
 
-/* 位置樣式 */
+/* 位置連結樣式 */
 #location a {
     color: #007bff;
     text-decoration: none;
@@ -100,6 +114,15 @@ ul li {
 
 #location a:hover {
     text-decoration: underline;
+}
+
+/* 圖片樣式 */
+.responsive-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 
 /* 頁腳樣式 */
