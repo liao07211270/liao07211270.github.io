@@ -32,23 +32,47 @@
 
         <section id="menu">
             <h2>菜單</h2>
-            <h3>前菜</h3>
-            <ul>
-                <li>沙拉 - $100</li>
-                <li>湯品 - $80</li>
-            </ul>
-            <h3>主菜</h3>
-            <ul>
-                <li>烤牛排 - $500</li>
-                <li>義大利麵 - $300</li>
-            </ul>
-            <h3>甜點</h3>
-            <ul>
-                <li>起司蛋糕 - $150</li>
-                <li>巧克力布朗尼 - $120</li>
-            </ul>
-            <!-- 菜單照片 -->
-            <img src="images/dishes.jpg" alt="菜品展示" class="responsive-img">
+            <div class="menu-section">
+                <h3>前菜</h3>
+                <ul class="menu-list">
+                    <li>
+                        <span>沙拉 - $100</span>
+                        <img src="images/salad.jpg" alt="沙拉" class="menu-img">
+                    </li>
+                    <li>
+                        <span>湯品 - $80</span>
+                        <img src="images/soup.jpg" alt="湯品" class="menu-img">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <h3>主菜</h3>
+                <ul class="menu-list">
+                    <li>
+                        <span>烤牛排 - $500</span>
+                        <img src="images/steak.jpg" alt="烤牛排" class="menu-img">
+                    </li>
+                    <li>
+                        <span>義大利麵 - $300</span>
+                        <img src="images/pasta.jpg" alt="義大利麵" class="menu-img">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <h3>甜點</h3>
+                <ul class="menu-list">
+                    <li>
+                        <span>起司蛋糕 - $150</span>
+                        <img src="images/cheesecake.jpg" alt="起司蛋糕" class="menu-img">
+                    </li>
+                    <li>
+                        <span>巧克力布朗尼 - $120</span>
+                        <img src="images/brownie.jpg" alt="巧克力布朗尼" class="menu-img">
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section id="hours">
@@ -65,4 +89,15 @@
             <img src="images/map.jpg" alt="地圖展示" class="responsive-img">
         </section>
 
-       
+        <section id="contact">
+            <h2>聯絡我們</h2>
+            <p>聯絡電話：123-456-789</p>
+            <p>電子郵件：restaurant@example.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 [餐廳名稱]. 保留所有權利。</p>
+    </footer>
+</body>
+</html>
