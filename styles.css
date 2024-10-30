@@ -3,65 +3,27 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #1a1a1a;
+    color: #ddd;
 }
 
 h1, h2, h3 {
-    color: #fafafa;
+    color: #f2f2f2;
     margin-bottom: 10px;
 }
 
 p {
-    color: #b3b3b3;
+    color: #bbb;
     line-height: 1.6;
-}
-
-/* 全局淡入效果 */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 按鈕樣式 */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #444;
-    color: #e0e0e0;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #1abc9c;
-}
-
-/* 分隔線樣式 */
-.divider {
-    border: 0;
-    height: 2px;
-    background: #333;
-    margin: 20px 0;
-    width: 80%;
 }
 
 /* Header 樣式 */
 header {
-    background: linear-gradient(90deg, #1e1e1e, #2e2e2e);
+    background: linear-gradient(90deg, #333, #555);
     color: white;
     text-align: center;
     padding: 40px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -78,6 +40,17 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
 }
 
 /* Main 樣式 */
@@ -116,22 +89,28 @@ section {
 
 .menu-list span {
     font-size: 1.4em;
-    color: #cfcfcf;
+    color: #ddd;
 }
 
-/* 圖片放大效果 */
-.zoom {
+/* 統一圖片樣式 */
+.menu-img, .responsive-img {
+    width: 250px;  /* 設定固定寬度 */
+    height: 200px; /* 設定固定高度 */
+    object-fit: cover; /* 確保圖片比例並裁切 */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
-.zoom:hover {
-    transform: scale(1.05);
+.menu-img:hover, .responsive-img:hover {
+    transform: scale(1.05); /* 放大效果 */
 }
 
 /* Footer 樣式 */
 footer {
-    background-color: #1e1e1e;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding
+    padding: 20px 0;
+}
 
