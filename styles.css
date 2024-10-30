@@ -28,15 +28,26 @@ main {
     margin: 0 auto;
 }
 
+/* 段落間隔樣式 */
+section {
+    padding: 20px 0;
+    border-bottom: 1px dashed #555; /* 段落間虛線 */
+    margin-bottom: 30px; /* 段落間距 */
+}
+
+section:last-of-type {
+    border-bottom: none; /* 移除最後一個段落的底線 */
+}
+
+/* 菜單樣式 */
 .menu-list {
     list-style: none;
     padding: 0;
 }
 
 .menu-item {
-    position: relative;
     display: flex;
-    justify-content: space-between; /* 文字與圖片左右對齊 */
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     padding: 15px 0;
@@ -45,7 +56,7 @@ main {
 
 .menu-item span:first-child {
     flex: 1;
-    text-align: left; /* 確保文字左對齊 */
+    text-align: left;
 }
 
 .menu-img {
@@ -55,7 +66,6 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    order: 2; /* 確保圖片在文字右側 */
 }
 
 /* 放大圖片效果 */
