@@ -3,27 +3,65 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* 深色背景 */
-    color: #e0e0e0; /* 淡灰色文字 */
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 h1, h2, h3 {
-    color: #ffffff; /* 白色標題 */
+    color: #fafafa;
     margin-bottom: 10px;
 }
 
 p {
-    color: #cccccc; /* 淡灰色段落文字 */
+    color: #b3b3b3;
     line-height: 1.6;
+}
+
+/* 全局淡入效果 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 按鈕樣式 */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #444;
+    color: #e0e0e0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #1abc9c;
+}
+
+/* 分隔線樣式 */
+.divider {
+    border: 0;
+    height: 2px;
+    background: #333;
+    margin: 20px 0;
+    width: 80%;
 }
 
 /* Header 樣式 */
 header {
-    background: linear-gradient(90deg, #444444, #333333); /* 深色漸層背景 */
-    color: #e0e0e0; /* 標頭文字顏色 */
+    background: linear-gradient(90deg, #1e1e1e, #2e2e2e);
+    color: white;
     text-align: center;
     padding: 40px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 加深陰影效果 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -31,7 +69,6 @@ header h1 {
     margin: 0;
 }
 
-/* 導航列 */
 nav ul {
     list-style: none;
     padding: 0;
@@ -43,24 +80,11 @@ nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: #e0e0e0; /* 頁首的連結顏色 */
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #1abc9c; /* 滑鼠懸停時的連結顏色 */
-}
-
 /* Main 樣式 */
 main {
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #222222; /* 主內容區背景色 */
-    border-radius: 10px;
 }
 
 /* Section 樣式 */
@@ -83,7 +107,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    border-bottom: 1px solid #333333; /* 更深的分隔線 */
+    border-bottom: 1px solid #333;
 }
 
 .menu-list li:last-child {
@@ -92,39 +116,22 @@ section {
 
 .menu-list span {
     font-size: 1.4em;
-    color: #e0e0e0; /* 菜單項目的文字顏色 */
+    color: #cfcfcf;
 }
 
-.menu-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 加深陰影效果 */
-    margin-left: 20px;
+/* 圖片放大效果 */
+.zoom {
+    transition: transform 0.3s ease;
 }
 
-/* 圖片樣式 */
-.responsive-img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 加深陰影效果 */
+.zoom:hover {
+    transform: scale(1.05);
 }
 
 /* Footer 樣式 */
 footer {
-    background-color: #333333; /* 深色頁尾背景 */
-    color: #e0e0e0; /* 頁尾文字顏色 */
+    background-color: #1e1e1e;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-}
+    padding
 
-
-footer p {
-    margin: 0;
-    font-size: 0.9em;
-}
