@@ -7,4 +7,10 @@ $(document).ready(function() {
             scrollTop: $(sectionId).offset().top
         }, 1000);
     });
+
+    // 點擊圖片切換顯示或隱藏文字描述
+    $(".menu-img").on("click", function() {
+        const description = $(this).next(".description");
+        description.toggle(); // 切換顯示/隱藏
+    });
 });
