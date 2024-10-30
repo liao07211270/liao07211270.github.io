@@ -8,9 +8,15 @@ $(document).ready(function() {
         }, 1000);
     });
 
-    // 點擊圖片切換顯示或隱藏文字描述
-    $(".menu-img").on("click", function() {
-        const description = $(this).next(".description");
-        description.toggle(); // 切換顯示/隱藏
+    // 游標在圖片上停留超過一秒時顯示文字描述
+    let timer;
+    $(".menu-img").on("mouseenter", function() {
+        const description = $(this).siblings(".description");
+        timer = setTimeout(function() {
+            description.fadeIn(); // 顯示文字描述
+        }, 1000); // 1 秒延遲
+    }).on("mouseleave", function() {
+        clearTimeout(timer); // 清除計時器
+        $(this).siblings(".description").fadeOut(); // 隱藏文字描述
     });
 });
