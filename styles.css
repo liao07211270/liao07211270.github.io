@@ -1,6 +1,9 @@
+/* 引入 Google 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap');
+
 /* 全局樣式 */
 body {
-    font-family: 'fantasy', sans-serif;
+    font-family: 'Roboto', sans-serif; /* 內文使用 Roboto */
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
@@ -8,6 +11,7 @@ body {
 }
 
 h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* 標題使用 Playfair Display */
     color: #f2f2f2;
     margin-bottom: 10px;
 }
@@ -15,6 +19,7 @@ h1, h2, h3 {
 p {
     color: #bbb;
     line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* 內文保持 Roboto */
 }
 
 /* Header 樣式 */
@@ -29,6 +34,7 @@ header {
 header h1 {
     font-size: 3em;
     margin: 0;
+    font-family: 'Playfair Display', serif; /* Header 主標題使用 Playfair Display */
 }
 
 nav ul {
@@ -46,6 +52,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif; /* 導航欄使用 Montserrat */
     transition: color 0.3s ease;
 }
 
@@ -90,20 +97,21 @@ section {
 .menu-list span {
     font-size: 1.4em;
     color: #ddd;
+    font-family: 'Roboto', sans-serif; /* 保持內文字體一致 */
 }
 
 /* 統一圖片樣式 */
 .menu-img, .responsive-img {
-    width: 250px;  /* 設定固定寬度 */
-    height: 200px; /* 設定固定高度 */
-    object-fit: cover; /* 確保圖片比例並裁切 */
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
 .menu-img:hover, .responsive-img:hover {
-    transform: scale(1.05); /* 放大效果 */
+    transform: scale(1.05);
 }
 
 /* Footer 樣式 */
@@ -112,5 +120,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    font-family: 'Montserrat', sans-serif; /* Footer 使用 Montserrat */
 }
-
