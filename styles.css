@@ -35,12 +35,11 @@ nav ul li a {
     font-size: 1.2em;
     color: #ddd; /* 目錄字體顏色 */
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s; /* 同時變更顏色與浮動效果 */
+    transition: color 0.3s; /* 改變顏色的效果 */
 }
 
 nav ul li a:hover {
     color: #fff; /* 懸停時改變顏色 */
-    transform: translateY(-5px); /* 浮動距離 */
 }
 
 /* Main 區域樣式 */
@@ -81,11 +80,11 @@ section {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* 加入變換效果 */
 }
 
 .menu-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* 只有圖片懸停時的效果 */
 }
 
 /* 隱藏的介紹文字樣式 */
