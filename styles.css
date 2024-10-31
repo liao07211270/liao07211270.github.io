@@ -5,12 +5,12 @@ body {
     padding: 0;
     background: url('teak0001.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: #fff; /* 設定全局文字顏色 */
 }
 
 /* Header 樣式 */
 header {
     background: rgba(0, 0, 0, 0.7);
-    color: white;
     text-align: center;
     padding: 50px 0;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
@@ -33,7 +33,7 @@ nav ul {
 nav ul li a {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    color: #ddd; /* 保持原本顏色 */
+    color: #ddd; /* 目錄字體顏色 */
     text-decoration: none;
     transition: color 0.3s, transform 0.3s; /* 同時變更顏色與浮動效果 */
 }
@@ -152,7 +152,6 @@ section {
 /* Footer 樣式 */
 footer {
     background: rgba(0, 0, 0, 0.7);
-    color: white;
     text-align: center;
     padding: 20px 0;
 }
