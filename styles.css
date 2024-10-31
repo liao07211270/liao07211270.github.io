@@ -1,4 +1,4 @@
-/* 全局樣式 *//* 全局樣式 */
+/* 全局樣式 */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -65,6 +65,7 @@ section {
     padding: 0;
 }
 
+/* 菜單項目 */
 .menu-item {
     display: flex;
     align-items: center;
@@ -74,7 +75,7 @@ section {
     margin-bottom: 20px; /* 增加每個項目的間距 */
 }
 
-/* 菜品圖片和描述文字的樣式 */
+/* 菜品圖片樣式 */
 .menu-img {
     width: 250px;
     height: 200px;
@@ -84,11 +85,7 @@ section {
     transition: transform 0.3s ease;
 }
 
-.menu-img:hover {
-    transform: scale(1.1);
-}
-
-/* 隱藏的介紹文字樣式 - 橫式顯示 */
+/* 隱藏的介紹文字樣式 */
 .description {
     display: none; /* 預設為隱藏 */
     background: rgba(0, 0, 0, 0.7);
@@ -96,45 +93,52 @@ section {
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 0.9em;
-    margin-right: 10px; /* 加入右側間距以區隔名稱與描述 */
+    margin-left: 10px; /* 調整與圖片之間的間距 */
+}
+
+/* 菜品詳情的容器 */
+.menu-details {
+    display: flex;
+    flex-direction: column; /* 垂直顯示 */
+    align-items: flex-start; /* 向左對齊 */
+}
+
+/* 菜品價格樣式 */
+.price {
+    font-weight: bold; /* 加粗顯示價格 */
 }
 
 /* 當滑鼠懸停時顯示介紹文字 */
 .menu-item:hover .description {
-    display: inline; /* 懸停時顯示 */
+    display: block; /* 懸停時顯示 */
 }
 
-/* 地圖圖片的樣式 */
+/* 菜品圖片懸停效果 */
+.menu-img:hover {
+    transform: scale(1.1);
+}
+
+/* 地圖樣式 */
 .map-container {
-    position: relative; /* 為了讓描述文字相對於容器 */
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.map-description {
+.map-container .description {
     display: none; /* 預設為隱藏 */
-    position: absolute;
-    top: 100%; /* 在地圖下方 */
-    left: 50%; /* 中心對齊 */
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 0.9em;
 }
 
-/* 懸停地圖時顯示描述文字 */
-.map-container:hover .map-description {
-    display: inline; /* 懸停時顯示 */
+/* 當滑鼠懸停時顯示地圖描述文字 */
+.map-container:hover .description {
+    display: block; /* 懸停時顯示 */
 }
 
 /* Footer 樣式 */
 footer {
+    text-align: center;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 40px; /* 增加 footer 與主體的間距 */
+    margin-top: 40px;
 }
