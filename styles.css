@@ -138,6 +138,7 @@ section {
     padding: 8px 12px;
     border-radius: 4px;
     margin-left: 10px; /* 與圖片的距離 */
+    white-space: nowrap; /* 防止換行 */
 }
 
 /* 懸停顯示地圖隱藏文字 */
