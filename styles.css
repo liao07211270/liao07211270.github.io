@@ -142,7 +142,7 @@ section {
 
 /* 懸停顯示地圖隱藏文字 */
 .map-container:hover .map-description {
-    display: block; /* 滑鼠懸停時顯示 */
+    display: inline; /* 滑鼠懸停時顯示 */
 }
 
 /* Footer 樣式 */
