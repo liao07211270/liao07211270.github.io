@@ -68,10 +68,10 @@ section {
 .menu-item {
     display: flex;
     align-items: center;
-    gap: 20px;
     margin-bottom: 20px; /* 增加每個項目的間距 */
 }
 
+/* 菜品圖片樣式 */
 .menu-img {
     width: 250px;
     height: 200px;
@@ -81,6 +81,7 @@ section {
     transition: transform 0.3s ease;
 }
 
+/* 懸浮效果 */
 .menu-img:hover {
     transform: scale(1.1);
 }
@@ -89,9 +90,10 @@ section {
 .menu-info {
     display: flex;
     flex-direction: column;
+    margin-left: 20px; /* 菜品信息與圖片的距離 */
 }
 
-/* 隱藏的介紹文字樣式 - 顯示在右側 */
+/* 隱藏的介紹文字樣式 */
 .description {
     display: none;
     background: rgba(0, 0, 0, 0.7);
@@ -106,12 +108,18 @@ section {
     display: inline;
 }
 
-/* 地圖樣式 */
+/* 地圖容器樣式 */
 .map-container {
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: inline-block;
 }
 
+.map-img {
+    width: 250px; /* 與菜品圖片一致 */
+    height: 200px; /* 與菜品圖片一致 */
+}
+
+/* 地圖描述樣式 */
 .map-description {
     display: none;
     background: rgba(0, 0, 0, 0.7);
