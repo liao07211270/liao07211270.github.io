@@ -5,7 +5,6 @@ body {
     padding: 0;
     background: url('teak0001.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #ddd;
 }
 
 /* Header 樣式 */
@@ -36,11 +35,12 @@ nav ul li a {
     font-size: 1.2em;
     color: #ddd;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s; /* 同時變更顏色與浮動效果 */
 }
 
 nav ul li a:hover {
-    color: #fff;
+    color: #fff; /* 懸停時改變顏色 */
+    transform: translateY(-5px); /* 懸停時向上浮動 */
 }
 
 /* Main 區域樣式 */
@@ -52,6 +52,7 @@ main {
     border-radius: 8px;
 }
 
+/* 其餘 CSS 保持不變 */
 section {
     margin-bottom: 80px;
 }
