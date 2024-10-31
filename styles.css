@@ -66,15 +66,21 @@ section {
 }
 
 .menu-item {
+    position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px; /* 調整項目之間的間距 */
+    gap: 30px;
     padding: 25px 0;
     border-bottom: 1px solid #333;
     margin-bottom: 20px; /* 增加每個項目的間距 */
 }
 
-/* 菜品圖片和描述文字的樣式 */
+.menu-item span:first-child {
+    flex: 1;
+    text-align: left;
+}
+
 .menu-img {
     width: 250px;
     height: 200px;
@@ -89,9 +95,13 @@ section {
     transform: scale(1.1);
 }
 
-/* 隱藏的介紹文字樣式 - 橫式顯示 */
+/* 隱藏的介紹文字樣式 - 顯示在右側 */
 .description {
-    display: none; /* 預設為隱藏 */
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: -200px; /* 控制介紹文字的間距 */
+    transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 8px 12px;
@@ -101,40 +111,14 @@ section {
 
 /* 當滑鼠懸停時顯示介紹文字 */
 .menu-item:hover .description {
-    display: inline; /* 懸停時顯示 */
-}
-
-/* 地圖圖片的樣式 */
-.map-container {
-    position: relative; /* 為了讓描述文字相對於容器 */
-}
-
-.map-description {
-    display: none; /* 預設為隱藏 */
-    position: absolute;
-    top: 100%; /* 在地圖下方 */
-    left: 50%; /* 中心對齊 */
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 0.9em;
-}
-
-/* 懸停地圖時顯示描述文字 */
-.map-container:hover .map-description {
-    display: inline; /* 懸停時顯示 */
+    display: inline;
 }
 
 /* Footer 樣式 */
 footer {
-    background: rgba(0, 0, 0, 0.7);
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 40px; /* 增加 footer 與主體的間距 */
+    padding: 30px;
+    font-size: 1.2em;
 }
