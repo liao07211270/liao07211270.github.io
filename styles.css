@@ -66,21 +66,15 @@ section {
 }
 
 .menu-item {
-    position: relative;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px; /* 調整項目之間的間距 */
     padding: 25px 0;
     border-bottom: 1px solid #333;
     margin-bottom: 20px; /* 增加每個項目的間距 */
 }
 
-/* 調整描述文字的位置到圖片右側 */
-.menu-item span:first-child {
-    flex: 1;
-    text-align: left;
-}
-
+/* 菜品圖片和描述文字的樣式 */
 .menu-img {
     width: 250px;
     height: 200px;
@@ -95,13 +89,9 @@ section {
     transform: scale(1.1);
 }
 
-/* 隱藏的介紹文字樣式 - 顯示在右側 */
+/* 隱藏的介紹文字樣式 - 橫式顯示 */
 .description {
     display: none; /* 預設為隱藏 */
-    position: absolute;
-    left: 100%; /* 將描述文字放到圖片右側 */
-    top: 50%;
-    transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 8px 12px;
@@ -114,7 +104,7 @@ section {
     display: inline; /* 懸停時顯示 */
 }
 
-/* 地圖圖片的描述文字樣式 */
+/* 地圖圖片的樣式 */
 .map-container {
     position: relative; /* 為了讓描述文字相對於容器 */
 }
