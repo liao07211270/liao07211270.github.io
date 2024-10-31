@@ -84,16 +84,18 @@ main {
     transition: transform 0.3s ease;
 }
 
-.menu-img:hover {
+.menu-img:hover,
+.small-img:hover {
     transform: scale(1.1);
 }
 
-/* 隱藏的橫式介紹文字樣式 */
+/* 隱藏的介紹文字樣式 - 顯示在右側 */
 .description {
     display: none;
     position: absolute;
-    bottom: 10px;
-    left: 20px;
+    top: 50%;
+    right: -200px;
+    transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 5px 10px;
@@ -110,18 +112,15 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    font-size: 0.9em;
 }
 
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-}
-
+/* 地圖圖片樣式 */
 .small-img {
     width: 100%;
     max-width: 300px;
     height: auto;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
