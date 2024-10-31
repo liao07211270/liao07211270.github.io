@@ -138,10 +138,7 @@ section {
     color: #fff;
     padding: 8px 12px;
     border-radius: 4px;
-    position: absolute;
-    left: 100%; /* 讓文字顯示在圖片的右邊 */
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: 10px; /* 與圖片的距離 */
 }
 
 /* 懸停顯示地圖隱藏文字 */
