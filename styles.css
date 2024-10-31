@@ -15,7 +15,7 @@ header {
     text-align: center;
     padding: 50px 0;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* 增加 header 與主體間的間距 */
 }
 
 header h1 {
@@ -53,11 +53,11 @@ main {
 }
 
 section {
-    margin-bottom: 80px;
+    margin-bottom: 80px; /* 增加每個 section 之間的間距 */
 }
 
 .menu-section {
-    margin-bottom: 60px;
+    margin-bottom: 60px; /* 各菜單部分的間距更大 */
 }
 
 .menu-list {
@@ -66,32 +66,40 @@ section {
 }
 
 .menu-item {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 20px; /* 調整菜品項目之間的間距 */
+    gap: 30px;
     padding: 25px 0;
     border-bottom: 1px solid #333;
-    margin-bottom: 20px;
-    position: relative; /* 使描述文字相對於菜品項目定位 */
+    margin-bottom: 20px; /* 增加每個項目的間距 */
 }
 
-/* 菜品詳情的容器 */
-.menu-details {
-    display: flex;
-    flex-direction: column; /* 垂直顯示 */
-    align-items: flex-start; /* 向左對齊 */
+/* 調整描述文字的位置到圖片右側 */
+.menu-item span:first-child {
+    flex: 1;
+    text-align: left;
 }
 
-/* 菜品價格樣式 */
-.price {
-    font-weight: bold; /* 加粗顯示價格 */
+.menu-img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.menu-img:hover,
+.small-img:hover {
+    transform: scale(1.1);
 }
 
 /* 隱藏的介紹文字樣式 - 顯示在右側 */
 .description {
     display: none; /* 預設為隱藏 */
     position: absolute;
-    left: 100%; /* 控制介紹文字的位置 */
+    left: 100%; /* 將描述文字放到圖片右側 */
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
@@ -99,68 +107,44 @@ section {
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 0.9em;
-    margin-left: 10px; /* 加入間距 */
 }
 
-/* Hover 顯示介紹文字 */
+/* 當滑鼠懸停時顯示介紹文字 */
 .menu-item:hover .description {
-    display: block; /* 懸停時顯示 */
+    display: inline; /* 懸停時顯示 */
 }
 
-/* 圖片樣式 */
-.menu-img {
-    width: 150px; /* 統一圖片大小 */
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* 添加懸浮效果 */
-}
-
-.menu-img:hover {
-    transform: scale(1.1); /* 懸浮時放大效果 */
-}
-
-/* 地圖樣式 */
+/* 地圖圖片的描述文字樣式 */
 .map-container {
-    position: relative; /* 使描述文字相對於地圖圖片定位 */
+    position: relative; /* 為了讓描述文字相對於容器 */
 }
 
 .map-description {
     display: none; /* 預設為隱藏 */
     position: absolute;
-    left: 100%; /* 控制描述文字的位置 */
-    top: 50%;
-    transform: translateY(-50%);
+    top: 100%; /* 在地圖下方 */
+    left: 50%; /* 中心對齊 */
+    transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 0.9em;
-    margin-left: 10px; /* 加入間距 */
 }
 
-/* Hover 顯示地圖描述文字 */
+/* 懸停地圖時顯示描述文字 */
 .map-container:hover .map-description {
-    display: block; /* 懸停時顯示 */
-}
-
-/* 地圖圖片樣式 */
-.small-img {
-    width: 150px; /* 統一圖片大小 */
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* 添加懸浮效果 */
-}
-
-.small-img:hover {
-    transform: scale(1.1); /* 懸浮時放大效果 */
+    display: inline; /* 懸停時顯示 */
 }
 
 /* Footer 樣式 */
 footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
     text-align: center;
     padding: 20px 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: #ddd;
     position: relative;
-    margin-top: 40px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px; /* 增加 footer 與主體的間距 */
 }
