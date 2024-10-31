@@ -111,7 +111,9 @@ section {
 /* 地圖容器樣式 */
 .map-container {
     position: relative;
-    display: inline-block;
+    display: flex; /* 使用 flexbox */
+    align-items: center; /* 垂直置中 */
+    margin-top: 20px;
 }
 
 /* 地圖圖片樣式 */
@@ -136,9 +138,9 @@ section {
     padding: 8px 12px;
     border-radius: 4px;
     position: absolute;
+    left: 100%; /* 讓文字顯示在圖片的右邊 */
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 }
 
 /* 懸停顯示地圖隱藏文字 */
