@@ -1,4 +1,4 @@
-/* 全局樣式 */
+/* 全局樣式 *//* 全局樣式 */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -84,8 +84,7 @@ section {
     transition: transform 0.3s ease;
 }
 
-.menu-img:hover,
-.small-img:hover {
+.menu-img:hover {
     transform: scale(1.1);
 }
 
@@ -97,6 +96,7 @@ section {
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 0.9em;
+    margin-right: 10px; /* 加入右側間距以區隔名稱與描述 */
 }
 
 /* 當滑鼠懸停時顯示介紹文字 */
