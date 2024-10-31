@@ -72,6 +72,7 @@ section {
     padding: 25px 0;
     border-bottom: 1px solid #333;
     margin-bottom: 20px;
+    position: relative; /* 使描述文字相對於菜品項目定位 */
 }
 
 /* 菜品詳情的容器 */
@@ -106,6 +107,18 @@ section {
     display: block; /* 懸停時顯示 */
 }
 
+/* 圖片樣式 */
+.menu-img {
+    width: 150px; /* 統一圖片大小 */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* 添加懸浮效果 */
+}
+
+.menu-img:hover {
+    transform: scale(1.1); /* 懸浮時放大效果 */
+}
+
 /* 地圖樣式 */
 .map-container {
     position: relative; /* 使描述文字相對於地圖圖片定位 */
@@ -130,17 +143,16 @@ section {
     display: block; /* 懸停時顯示 */
 }
 
-/* 圖片樣式 */
-.menu-img,
+/* 地圖圖片樣式 */
 .small-img {
     width: 150px; /* 統一圖片大小 */
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease; /* 添加懸浮效果 */
 }
 
-.responsive-img {
-    width: 100%;
-    height: auto;
+.small-img:hover {
+    transform: scale(1.1); /* 懸浮時放大效果 */
 }
 
 /* Footer 樣式 */
