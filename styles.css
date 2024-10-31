@@ -15,7 +15,7 @@ header {
     text-align: center;
     padding: 50px 0;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-    margin-bottom: 40px; /* 增加 header 與主體間的間距 */
+    margin-bottom: 40px;
 }
 
 header h1 {
@@ -53,11 +53,11 @@ main {
 }
 
 section {
-    margin-bottom: 80px; /* 增加每個 section 之間的間距 */
+    margin-bottom: 80px;
 }
 
 .menu-section {
-    margin-bottom: 60px; /* 各菜單部分的間距更大 */
+    margin-bottom: 60px;
 }
 
 .menu-list {
@@ -73,7 +73,7 @@ section {
     gap: 30px;
     padding: 25px 0;
     border-bottom: 1px solid #333;
-    margin-bottom: 20px; /* 增加每個項目的間距 */
+    margin-bottom: 20px;
 }
 
 .menu-item span:first-child {
@@ -100,7 +100,7 @@ section {
     display: none;
     position: absolute;
     top: 50%;
-    left: 200px; /* 控制介紹文字的間距 */
+    left: -200px;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
@@ -114,6 +114,39 @@ section {
     display: inline;
 }
 
+/* 地圖圖片樣式 */
+.map-container {
+    position: relative;
+    display: inline-block;
+}
+
+.small-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* 地圖隱藏文字樣式 */
+.map-description {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* 當滑鼠懸停在地圖圖片時顯示隱藏文字 */
+.map-container:hover .map-description {
+    display: inline;
+}
+
 /* Footer 樣式 */
 footer {
     background-color: #333;
@@ -121,14 +154,5 @@ footer {
     text-align: center;
     padding: 30px;
     font-size: 0.9em;
-    margin-top: 40px; /* 增加 footer 與主體的間距 */
-}
-
-/* 地圖圖片樣式 */
-.small-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    margin-top: 40px;
 }
