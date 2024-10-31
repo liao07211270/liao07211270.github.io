@@ -40,7 +40,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #fff; /* 懸停時改變顏色 */
-    transform: translateY(-10px); /* 增加懸停時的浮動距離 */
+    transform: translateY(-5px); /* 懸停時向上浮動 */
 }
 
 /* Main 區域樣式 */
@@ -155,4 +155,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    position: relative;
 }
