@@ -28,12 +28,12 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-    font-size: 1.2em; /* 加大字體大小 */
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 nav ul li a {
-    color: #9c27b0;
+    color: #e0e0e0; /* 淺色字體 */
     text-decoration: none;
 }
 
@@ -90,18 +90,19 @@ section:last-of-type {
     position: relative;
 }
 
-/* 隱藏介紹文字樣式 */
+/* 隱藏介紹文字橫式顯示 */
 .description {
     display: none;
     position: absolute;
     top: 50%;
-    left: calc(100% + 10px); /* 移動到圖片旁邊 */
+    left: calc(100% + 15px); /* 圖片右側顯示 */
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.9em;
+    white-space: nowrap; /* 橫式顯示 */
 }
 
 /* 放大圖片效果 */
@@ -114,15 +115,8 @@ section:last-of-type {
     display: block;
 }
 
-/* Footer 樣式 */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.responsive-img {
-    max-width: 100%;
-   
+/* 地圖縮小 */
+.small-img {
+    width: 300px;
+    height: auto;
+    border-radius: 8
