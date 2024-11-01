@@ -23,8 +23,8 @@ $(document).ready(function() {
     // 圖片輪播設定
     const slider = $(".slider");
     const images = $(".slider img");
+    const imageWidth = 250; // 單張圖片寬度
     const totalImages = images.length;
-    let currentIndex = 1;
 
     // 複製第一張和最後一張圖片，並添加到末尾和開頭
     const firstClone = images.first().clone();
@@ -33,12 +33,14 @@ $(document).ready(function() {
     slider.prepend(lastClone);
 
     // 更新圖片容器的寬度
-    slider.css("width", `${(totalImages + 2) * 250}px`);
-    slider.css("transform", `translateX(-${250}px)`); // 初始化位置
+    slider.css("width", `${(totalImages + 2) * imageWidth}px`);
+    slider.css("transform", `translateX(-${imageWidth}px)`); // 初始化位置
+
+    let currentIndex = 1;
 
     function showImage(index) {
         slider.css("transition", "transform 0.5s ease");
-        slider.css("transform", `translateX(-${index * 250}px)`);
+        slider.css("transform", `translateX(-${index * imageWidth}px)`);
     }
 
     $(".next").click(function() {
@@ -48,7 +50,7 @@ $(document).ready(function() {
             setTimeout(() => {
                 slider.css("transition", "none");
                 currentIndex = 1;
-                slider.css("transform", `translateX(-${250}px)`);
+                slider.css("transform", `translateX(-${imageWidth}px)`);
             }, 500);
         }
     });
@@ -60,7 +62,7 @@ $(document).ready(function() {
             setTimeout(() => {
                 slider.css("transition", "none");
                 currentIndex = totalImages;
-                slider.css("transform", `translateX(-${currentIndex * 250}px)`);
+                slider.css("transform", `translateX(-${currentIndex * imageWidth}px)`);
             }, 500);
         }
     });
