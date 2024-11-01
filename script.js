@@ -1,69 +1,34 @@
-$(document).ready(function() {
-    // 平滑滾動到指定區塊
-    $("nav ul li a").on("click", function(event) {
-        event.preventDefault();
-        const sectionId = $(this).attr("href");
-        $("html, body").animate({
-            scrollTop: $(sectionId).offset().top
-        }, 1000);
-    });
+// JavaScript for image slider functionality
+const slider = document.querySelector('.slider');
+const images = document.querySelectorAll('.slider img');
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
+let currentIndex = 0;
 
-    // 游標在圖片上停留超過一秒時顯示文字描述
-    let timer;
-    $(".menu-img").on("mouseenter", function() {
-        const description = $(this).siblings(".description");
-        timer = setTimeout(function() {
-            description.fadeIn();
-        }, 1000);
-    }).on("mouseleave", function() {
-        clearTimeout(timer);
-        $(this).siblings(".description").fadeOut();
-    });
-
-    // 圖片輪播設定
-    const slider = $(".slider");
-    const images = $(".slider img");
-    const imageWidth = 250; // 單張圖片寬度
-    const totalImages = images.length;
-
-    // 複製第一張和最後一張圖片，並添加到末尾和開頭
-    const firstClone = images.first().clone();
-    const lastClone = images.last().clone();
-    slider.append(firstClone);
-    slider.prepend(lastClone);
-
-    // 更新圖片容器的寬度
-    slider.css("width", `${(totalImages + 2) * imageWidth}px`);
-    slider.css("transform", `translateX(-${imageWidth}px)`); // 初始化位置
-
-    let currentIndex = 1;
-
-    function showImage(index) {
-        slider.css("transition", "transform 0.5s ease");
-        slider.css("transform", `translateX(-${index * imageWidth}px)`);
+function showImage(index) {
+    // 確保索引在範圍內
+    if (index < 0) {
+        currentIndex = images.length - 1; // 循環到最後一張
+    } else if (index >= images.length) {
+        currentIndex = 0; // 循環到第一張
+    } else {
+        currentIndex = index;
     }
+    // 更新圖片顯示
+    const offset = -currentIndex * 250; // 假設每張圖片寬度為250px
+    slider.style.transform = `translateX(${offset}px)`;
+}
 
-    $(".next").click(function() {
-        currentIndex++;
-        showImage(currentIndex);
-        if (currentIndex === totalImages + 1) { // 到達最後的複製圖
-            setTimeout(() => {
-                slider.css("transition", "none");
-                currentIndex = 1;
-                slider.css("transform", `translateX(-${imageWidth}px)`);
-            }, 500);
-        }
-    });
-
-    $(".prev").click(function() {
-        currentIndex--;
-        showImage(currentIndex);
-        if (currentIndex === 0) { // 到達最前的複製圖
-            setTimeout(() => {
-                slider.css("transition", "none");
-                currentIndex = totalImages;
-                slider.css("transform", `translateX(-${currentIndex * imageWidth}px)`);
-            }, 500);
-        }
-    });
+// 設置按鈕事件
+nextButton.addEventListener('click', () => {
+    showImage(currentIndex + 1);
 });
+
+prevButton.addEventListener('click', () => {
+    showImage(currentIndex - 1);
+});
+
+// 自動播放功能（可選）
+setInterval(() => {
+    showImage(currentIndex + 1);
+}, 3000); // 每5秒切換圖片
