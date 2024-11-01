@@ -92,96 +92,86 @@ section {
     color: #fff;
     padding: 8px 12px;
     border-radius: 4px;
-    margin-left: 10px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .menu-item:hover .description-container {
-    display: inline;
+    display: block;
 }
 
-.menu-name-price {
-    font-size: 1.2em;
-    margin-left: auto;
-}
-
-.map-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.map-img {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.map-img:hover {
-    transform: scale(1.1);
-}
-
-.map-description {
-    display: none;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 4px;
-    margin-left: 10px;
-    white-space: nowrap;
-}
-
-.map-container:hover .map-description {
-    display: inline;
-}
-
-/* Footer 樣式 */
-footer {
-    background: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* 圖片滑動容器 */
+/* Slider 樣式 */
 .slider-container {
     position: relative;
     overflow: hidden;
-    width: 250px; /* 與菜單圖片大小一致 */
-    height: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
 }
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider img {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* 最大寬度 */
+    max-height: 400px; /* 最大高度 */
 }
 
-/* 滑動按鈕 */
-.slider-button {
+button.prev, button.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    border-radius: 4px;
+    z-index: 1;
 }
 
-.prev {
+button.prev {
     left: 10px;
 }
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 位置區域樣式 */
+.map-container {
+    position: relative;
+    text-align: center;
+}
+
+.small-img {
+    width: 300px; /* 地圖圖片的統一寬度 */
+    height: 200px; /* 地圖圖片的統一高度 */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.map-description {
+    display: block;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* Footer 樣式 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
 
 .next {
     right: 10px;
