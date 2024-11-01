@@ -103,7 +103,7 @@ section {
     padding: 10px;
     border-radius: 4px;
     position: absolute;
-    bottom: 100%;
+    bottom: 80%; /* 下調描述的位置 */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -170,7 +170,7 @@ button:hover {
 }
 
 .map-description {
-    display: block;
+    display: none; /* 隱藏預設狀態 */
     margin-top: 10px;
     color: #ddd;
 }
