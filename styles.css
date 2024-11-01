@@ -86,12 +86,16 @@ section {
 }
 
 .menu-item {
-    justify-content: flex-start; /* 將菜品名稱、價格和圖片左對齊 */
+    justify-content: space-between; /* 將菜品名稱、價格和圖片分散 */
 }
 
 .item-text {
     flex: 1; /* 讓名稱占據剩餘空間 */
     text-align: left; /* 左對齊 */
+}
+
+.item-price {
+    margin-left: 0px; /* 調整價格和名稱之間的間距 */
 }
 
 /* 隱藏的介紹文字樣式 */
@@ -139,6 +143,11 @@ footer {
     padding: 8px 12px;
     border-radius: 4px;
 }
+
+.map-container:hover .map-description {
+    display: inline;
+}
+
 
 .map-container:hover .map-description {
     display: inline;
