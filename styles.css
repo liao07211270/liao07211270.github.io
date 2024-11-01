@@ -146,6 +146,45 @@ section {
     display: inline; /* 滑鼠懸停時顯示 */
 }
 
+/* 圖片滑動容器樣式 */
+.slider-container {
+    position: relative;
+    width: 250px; /* 單張圖片寬度 */
+    overflow: hidden;
+    margin: 0 auto; /* 置中圖片輪播 */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider img {
+    width: 250px; /* 單張圖片寬度 */
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 按鈕樣式 */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
 /* Footer 樣式 */
 footer {
     background: rgba(0, 0, 0, 0.7);
