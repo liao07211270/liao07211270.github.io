@@ -10,22 +10,33 @@ $(document).ready(function() {
 
     // 下一張圖片
     function nextImage() {
-        images.eq(currentIndex).hide(); // 隱藏當前圖片
-        currentIndex = (currentIndex + 1) % totalImages; // 更新索引
-        images.eq(currentIndex).fadeIn(); // 顯示下一張圖片
+        images.eq(currentIndex).fadeOut(500, function() { // 隱藏當前圖片
+            currentIndex = (currentIndex + 1) % totalImages; // 更新索引
+            images.eq(currentIndex).fadeIn(500); // 顯示下一張圖片
+        });
     }
 
     // 上一張圖片
     function prevImage() {
-        images.eq(currentIndex).hide(); // 隱藏當前圖片
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages; // 更新索引
-        images.eq(currentIndex).fadeIn(); // 顯示上一張圖片
+        images.eq(currentIndex).fadeOut(500, function() { // 隱藏當前圖片
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages; // 更新索引
+            images.eq(currentIndex).fadeIn(500); // 顯示上一張圖片
+        });
     }
 
     // 自動播放圖片
-    setInterval(nextImage, 3000); // 每3秒切換一次圖片
+    let interval = setInterval(nextImage, 3000); // 每3秒切換一次圖片
 
     // 按鈕事件
-    $('.next').on('click', nextImage);
-    $('.prev').on('click', prevImage);
+    $('.next').on('click', function() {
+        clearInterval(interval); // 暫停自動播放
+        nextImage();
+        interval = setInterval(nextImage, 3000); // 恢復自動播放
+    });
+
+    $('.prev').on('click', function() {
+        clearInterval(interval); // 暫停自動播放
+        prevImage();
+        interval = setInterval(nextImage, 3000); // 恢復自動播放
+    });
 });
