@@ -69,15 +69,22 @@ section {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 15px 0;
-    border-bottom: 1px solid #333;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
 }
 
 .menu-img {
-    width: 250px;
-    height: 200px;
-    border-radius: 8px;
+    width: 150px; /* 菜品圖片的統一寬度 */
+    height: 100px; /* 菜品圖片的統一高度 */
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .item-details {
@@ -103,7 +110,7 @@ section {
     padding: 10px;
     border-radius: 4px;
     position: absolute;
-    bottom: 100%;
+    bottom: 70%; /* 下調描述的位置 */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -170,7 +177,7 @@ button:hover {
 }
 
 .map-description {
-    display: block;
+    display: none; /* 隱藏預設狀態 */
     margin-top: 10px;
     color: #ddd;
 }
