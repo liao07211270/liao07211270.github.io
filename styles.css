@@ -51,6 +51,7 @@ main {
     border-radius: 8px;
 }
 
+/* 其餘 CSS 保持不變 */
 section {
     margin-bottom: 80px;
 }
@@ -88,54 +89,66 @@ section {
 
 /* 隱藏的介紹文字樣式 */
 .description-container {
-    display: none; /* 預設隱藏 */
-    position: absolute; /* 絕對定位以便放置在圖片旁邊 */
-    left: 270px; /* 調整顯示位置 */
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    width: 200px; /* 隱藏文字框的寬度 */
-    z-index: 1; /* 確保顯示在上層 */
-}
-
-/* 點擊顯示隱藏文字 */
-.menu-item:hover .description-container {
-    display: block; /* 懸停時顯示文字 */
-}
-
-/* 地圖樣式 */
-.map-container {
-    position: relative;
-}
-
-.map-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.map-description {
-    display: none; /* 預設隱藏 */
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+    display: none; /* 初始隱藏 */
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-left: 10px; /* 菜品描述與圖片之間的距離 */
 }
 
-/* 點擊地圖顯示隱藏文字 */
+/* 懸停顯示隱藏文字 */
+.menu-item:hover .description-container {
+    display: inline; /* 滑鼠懸停時顯示 */
+}
+
+/* 菜品名稱與價格 */
+.menu-name-price {
+    font-size: 1.2em;
+    margin-left: auto; /* 將名稱與價格移到右邊 */
+}
+
+/* 地圖容器樣式 */
+.map-container {
+    position: relative;
+    display: flex; /* 使用 flexbox */
+    align-items: center; /* 垂直置中 */
+    margin-top: 20px;
+}
+
+/* 地圖圖片樣式 */
+.map-img {
+    width: 250px; /* 設定與菜品圖片相同的大小 */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.map-img:hover {
+    transform: scale(1.1);
+}
+
+/* 地圖隱藏文字樣式 */
+.map-description {
+    display: none; /* 初始隱藏 */
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-left: 10px; /* 與圖片的距離 */
+    white-space: nowrap; /* 防止換行 */
+}
+
+/* 懸停顯示地圖隱藏文字 */
 .map-container:hover .map-description {
-    display: block; /* 懸停時顯示文字 */
+    display: inline; /* 滑鼠懸停時顯示 */
 }
 
 /* Footer 樣式 */
 footer {
+    background: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding: 20px 0;
-    background: rgba(0, 0, 0, 0.7);
-    margin-top: 40px;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.5);
 }
