@@ -1,45 +1,31 @@
 $(document).ready(function() {
-    // 平滑滾動到指定區塊
-    $("nav ul li a").on("click", function(event) {
-        event.preventDefault();
-        const sectionId = $(this).attr("href");
-        $("html, body").animate({
-            scrollTop: $(sectionId).offset().top
-        }, 1000);
-    });
+    let currentIndex = 0; // 當前圖片索引
+    const images = $('.slider img'); // 獲取所有圖片
+    const totalImages = images.length; // 總圖片數
 
-    // 游標在圖片上停留超過一秒時顯示文字描述
-    let timer;
-    $(".menu-img").on("mouseenter", function() {
-        const description = $(this).siblings(".description");
-        timer = setTimeout(function() {
-            description.fadeIn(); // 顯示文字描述
-        }, 1000); // 1 秒延遲
-    }).on("mouseleave", function() {
-        clearTimeout(timer); // 清除計時器
-        $(this).siblings(".description").fadeOut(); // 隱藏文字描述
-    });
+    // 隱藏所有圖片
+    images.hide();
+    // 顯示第一張圖片
+    images.eq(currentIndex).show();
 
-    // 圖片滑動頁面功能
-    let slideIndex = 0;
-
-    function showSlide(index) {
-        const slides = $(".slider img");
-        slideIndex = (index + slides.length) % slides.length; // 確保索引在範圍內
-        $(".slider").css("transform", `translateX(-${slideIndex * 100}%)`);
+    // 下一張圖片
+    function nextImage() {
+        images.eq(currentIndex).hide(); // 隱藏當前圖片
+        currentIndex = (currentIndex + 1) % totalImages; // 更新索引
+        images.eq(currentIndex).fadeIn(); // 顯示下一張圖片
     }
 
-    // 點擊左右按鈕切換圖片
-    $(".prev").on("click", function() {
-        showSlide(slideIndex - 1);
-    });
+    // 上一張圖片
+    function prevImage() {
+        images.eq(currentIndex).hide(); // 隱藏當前圖片
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages; // 更新索引
+        images.eq(currentIndex).fadeIn(); // 顯示上一張圖片
+    }
 
-    $(".next").on("click", function() {
-        showSlide(slideIndex + 1);
-    });
+    // 自動播放圖片
+    setInterval(nextImage, 3000); // 每3秒切換一次圖片
 
-    // 自動輪播
-    setInterval(function() {
-        showSlide(slideIndex + 1);
-    }, 3000); // 每 3 秒自動切換一次
+    // 按鈕事件
+    $('.next').on('click', nextImage);
+    $('.prev').on('click', prevImage);
 });
