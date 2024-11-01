@@ -1,19 +1,18 @@
-/* 全局樣式 */
+/* 基本設定 */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('teak0001.jpg') no-repeat center center fixed;
+    background: url('teak_page-0001.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff; /* 設定全局文字顏色 */
+    color: #fff;
 }
 
-/* Header 樣式 */
+/* 頁首設定 */
 header {
     background: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding: 50px 0;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
 }
 
@@ -35,14 +34,9 @@ nav ul li a {
     font-size: 1.2em;
     color: #ddd;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #fff;
-}
-
-/* Main 區域樣式 */
+/* 主要內容區域 */
 main {
     padding: 60px;
     max-width: 1200px;
@@ -51,140 +45,92 @@ main {
     border-radius: 8px;
 }
 
-section {
-    margin-bottom: 80px;
-}
-
-.menu-section {
-    margin-bottom: 60px;
-}
-
-.menu-list {
-    list-style: none;
-    padding: 0;
-}
-
+/* 菜單設定 */
 .menu-item {
     position: relative;
     display: flex;
-    margin-bottom: 20px; /* 調整菜單品項間的間距 */
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
 }
 
 .menu-img {
-    width: 150px; /* 菜品圖片的統一寬度 */
-    height: 100px; /* 菜品圖片的統一高度 */
+    float: left;
+    width: 250px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.item-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1; /* 占用剩餘空間 */
-    padding: 10px; /* 增加內部間距 */
+.menu-img:hover {
+    transform: scale(1.1);
 }
 
-.item-text {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.item-price {
-    font-size: 1.2em;
-    color: #f0c040;
-}
-
-.description {
-    display: none; /* 隱藏預設狀態 */
+/* 隱藏文字設定，顯示在圖片下方 */
+.description-container {
+    display: none;
+    position: absolute;
+    top: 65%; /* 調整為更靠下 */
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    color: #fff;
+    padding: 8px 12px;
     border-radius: 4px;
-    position: absolute;
-    bottom: 30px; /* 下調描述的位置 */
-    left: 10px; /* 稍微調整描述的左側距離 */
+    white-space: nowrap;
 }
 
-/* Hover時顯示描述 */
-.menu-item:hover .description {
-    display: block; /* 懸停時顯示描述 */
+.menu-item:hover .description-container {
+    display: block;
 }
 
-/* Slider 樣式 */
-.slider-container {
-    position: relative;
-    overflow: hidden;
-    margin: 20px 0;
+/* 菜單品項文字及價格位置設定 */
+.item-text {
+    margin-left: auto;
+    font-size: 1.2em;
 }
 
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slider img {
-    width: 100%;
-    height: auto;
-    max-width: 600px; /* 最大寬度 */
-    max-height: 400px; /* 最大高度 */
-}
-
-button.prev, button.next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-button.prev {
-    left: 10px;
-}
-
-button.next {
-    right: 10px;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* 地圖區域樣式 */
+/* 地圖部分 */
 .map-container {
     position: relative;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .map-img {
-    width: 300px; /* 地圖圖片的統一寬度 */
-    height: 200px; /* 地圖圖片的統一高度 */
+    width: 250px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .map-description {
-    display: none; /* 隱藏預設狀態 */
-    margin-top: 10px;
-    color: #ddd;
+    display: none;
+    position: absolute;
+    top: 65%; /* 調整為更靠下 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
 }
 
-/* Footer 樣式 */
+.map-container:hover .map-description {
+    display: block;
+}
+
+/* 頁尾設定 */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     background: rgba(0, 0, 0, 0.7);
-    position: relative;
+    color: #ddd;
 }
