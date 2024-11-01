@@ -86,16 +86,12 @@ section {
 }
 
 .menu-item {
-    justify-content: space-between; /* 將菜品名稱、價格和圖片分散 */
+    justify-content: flex-start; /* 將菜品名稱、價格和圖片左對齊 */
 }
 
 .item-text {
     flex: 1; /* 讓名稱占據剩餘空間 */
     text-align: left; /* 左對齊 */
-}
-
-.item-price {
-    margin-left: 0px; /* 調整價格和名稱之間的間距 */
 }
 
 /* 隱藏的介紹文字樣式 */
@@ -106,6 +102,15 @@ section {
     color: #fff;
     padding: 8px 12px;
     border-radius: 4px;
+}
+
+/* 漂浮效果 */
+.menu-img:hover {
+    transform: scale(1.05); /* 鼠標懸停時放大 */
+}
+
+.menu-item:hover .description {
+    display: inline; /* 鼠標懸停時顯示描述文字 */
 }
 
 /* Footer 樣式 */
@@ -148,7 +153,7 @@ footer {
     display: inline;
 }
 
-
-.map-container:hover .map-description {
-    display: inline;
+/* 當滑鼠移動到地圖圖片上時，放大效果 */
+.small-img:hover {
+    transform: scale(1.05); /* 鼠標懸停時放大 */
 }
