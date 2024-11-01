@@ -76,21 +76,31 @@ section {
 .menu-img {
     width: 250px;
     height: 200px;
-    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    object-fit: cover;
 }
 
-.menu-img:hover {
-    transform: scale(1.1);
+.item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; /* 占用剩餘空間 */
 }
 
-.description-container {
-    display: none;
+.item-text {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.item-price {
+    font-size: 1.2em;
+    color: #f0c040;
+}
+
+.description {
+    display: none; /* 隱藏預設狀態 */
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
     position: absolute;
     bottom: 100%;
@@ -98,8 +108,9 @@ section {
     transform: translateX(-50%);
 }
 
-.menu-item:hover .description-container {
-    display: block;
+/* Hover時顯示描述 */
+.menu-item:hover .description {
+    display: block; /* 懸停時顯示描述 */
 }
 
 /* Slider 樣式 */
