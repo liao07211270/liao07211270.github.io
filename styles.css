@@ -95,6 +95,7 @@ section {
 }
 
 .item-text {
+    margin-left: 20px; /* 菜品名稱和價格之間的間距 */
     margin-left: auto; /* 讓名稱和價格在最右側 */
     font-size: 1.2em;
 }
