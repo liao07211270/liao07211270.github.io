@@ -110,7 +110,7 @@ section {
     padding: 10px;
     border-radius: 4px;
     position: absolute;
-    bottom: 70%; /* 下調描述的位置 */
+    bottom: 10%; /* 下調描述的位置 */
     left: 50%;
     transform: translateX(-50%);
 }
