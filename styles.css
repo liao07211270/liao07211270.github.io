@@ -90,7 +90,7 @@ section {
     display: none;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 8px 12px;
+    padding: 8px;
     border-radius: 4px;
     position: absolute;
     bottom: 100%;
@@ -151,7 +151,7 @@ button:hover {
     text-align: center;
 }
 
-.small-img {
+.map-img {
     width: 300px; /* 地圖圖片的統一寬度 */
     height: 200px; /* 地圖圖片的統一高度 */
     object-fit: cover;
@@ -170,9 +170,4 @@ footer {
     padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     position: relative;
-}
-
-
-.next {
-    right: 10px;
 }
