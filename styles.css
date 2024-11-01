@@ -101,7 +101,7 @@ section {
 }
 
 .item-price {
-    margin-left: 10px; /* 調整價格和名稱之間的間距 */
+    margin-left: 0px; /* 調整價格和名稱之間的間距 */
 }
 
 /* 漂浮效果 */
