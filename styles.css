@@ -51,51 +51,12 @@ main {
     border-radius: 8px;
 }
 
-/* 圖片滑動容器樣式 */
-.slider-container {
-    position: relative;
-    width: 250px; /* 單張圖片寬度 */
-    overflow: hidden;
-    margin: 0 auto; /* 置中圖片輪播 */
-    margin-bottom: 40px; /* 分隔各區域 */
+section {
+    margin-bottom: 80px;
 }
 
-.slider {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slider img {
-    width: 250px; /* 單張圖片寬度 */
-    height: 200px;
-    object-fit: cover;
-}
-
-/* 按鈕樣式 */
-.slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 1.5em;
-    z-index: 1;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-/* 菜單樣式 */
 .menu-section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .menu-list {
@@ -104,48 +65,77 @@ main {
 }
 
 .menu-item {
+    position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    gap: 20px; /* 圖片與隱藏文字及名稱的距離 */
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
 }
 
 .menu-img {
-    width: 100px; /* 菜單圖片寬度 */
-    height: 75px;
+    width: 250px;
+    height: 200px;
     object-fit: cover;
-    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; /* 加入變換效果 */
 }
 
+.menu-img:hover {
+    transform: scale(1.1); /* 只有圖片懸停時的效果 */
+}
+
+/* 隱藏的介紹文字樣式 */
 .description-container {
-    display: none; /* 初始隱藏描述 */
-    background: rgba(0, 0, 0, 0.7);
+    display: none; /* 預設隱藏 */
+    position: absolute; /* 絕對定位以便放置在圖片旁邊 */
+    left: 270px; /* 調整顯示位置 */
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
     padding: 10px;
     border-radius: 5px;
-    position: absolute;
-    left: 120px; /* 根據需要調整位置 */
-    z-index: 2;
+    width: 200px; /* 隱藏文字框的寬度 */
+    z-index: 1; /* 確保顯示在上層 */
 }
 
-/* 營業時間、位置和聯絡我們的樣式 */
+/* 點擊顯示隱藏文字 */
+.menu-item:hover .description-container {
+    display: block; /* 懸停時顯示文字 */
+}
+
+/* 地圖樣式 */
 .map-container {
-    text-align: center;
     position: relative;
 }
 
+.map-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 .map-description {
+    display: none; /* 預設隱藏 */
     position: absolute;
-    top: 10px;
+    bottom: 10px;
     left: 10px;
-    color: #fff;
     background: rgba(0, 0, 0, 0.7);
+    color: #fff;
     padding: 5px;
     border-radius: 5px;
+}
+
+/* 點擊地圖顯示隱藏文字 */
+.map-container:hover .map-description {
+    display: block; /* 懸停時顯示文字 */
 }
 
 /* Footer 樣式 */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     background: rgba(0, 0, 0, 0.7);
     margin-top: 40px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.5);
 }
