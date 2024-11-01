@@ -33,13 +33,13 @@ nav ul {
 nav ul li a {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    color: #ddd;
+    color: #ddd; /* 目錄字體顏色 */
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s; /* 改變顏色的效果 */
 }
 
 nav ul li a:hover {
-    color: #fff;
+    color: #fff; /* 懸停時改變顏色 */
 }
 
 /* Main 區域樣式 */
@@ -51,6 +51,7 @@ main {
     border-radius: 8px;
 }
 
+/* 其餘 CSS 保持不變 */
 section {
     margin-bottom: 80px;
 }
@@ -68,7 +69,7 @@ section {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px; /* 圖片與隱藏文字及名稱的距離 */
     padding: 15px 0;
     border-bottom: 1px solid #333;
 }
@@ -79,40 +80,45 @@ section {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* 加入變換效果 */
 }
 
 .menu-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* 只有圖片懸停時的效果 */
 }
 
+/* 隱藏的介紹文字樣式 */
 .description-container {
-    display: none;
+    display: none; /* 初始隱藏 */
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 8px 12px;
     border-radius: 4px;
-    margin-left: 10px;
+    margin-left: 10px; /* 菜品描述與圖片之間的距離 */
 }
 
+/* 懸停顯示隱藏文字 */
 .menu-item:hover .description-container {
-    display: inline;
+    display: inline; /* 滑鼠懸停時顯示 */
 }
 
+/* 菜品名稱與價格 */
 .menu-name-price {
     font-size: 1.2em;
-    margin-left: auto;
+    margin-left: auto; /* 將名稱與價格移到右邊 */
 }
 
+/* 地圖容器樣式 */
 .map-container {
     position: relative;
-    display: flex;
-    align-items: center;
+    display: flex; /* 使用 flexbox */
+    align-items: center; /* 垂直置中 */
     margin-top: 20px;
 }
 
+/* 地圖圖片樣式 */
 .map-img {
-    width: 250px;
+    width: 250px; /* 設定與菜品圖片相同的大小 */
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
@@ -124,35 +130,28 @@ section {
     transform: scale(1.1);
 }
 
+/* 地圖隱藏文字樣式 */
 .map-description {
-    display: none;
+    display: none; /* 初始隱藏 */
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 8px 12px;
     border-radius: 4px;
-    margin-left: 10px;
-    white-space: nowrap;
+    margin-left: 10px; /* 與圖片的距離 */
+    white-space: nowrap; /* 防止換行 */
 }
 
+/* 懸停顯示地圖隱藏文字 */
 .map-container:hover .map-description {
-    display: inline;
+    display: inline; /* 滑鼠懸停時顯示 */
 }
 
-/* Footer 樣式 */
-footer {
-    background: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* 圖片滑動容器 */
+/* 圖片滑動容器樣式 */
 .slider-container {
     position: relative;
+    width: 250px; /* 單張圖片寬度 */
     overflow: hidden;
-    width: 250px; /* 與菜單圖片大小一致 */
-    height: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; /* 置中圖片輪播 */
 }
 
 .slider {
@@ -161,22 +160,21 @@ footer {
 }
 
 .slider img {
-    width: 250px;
+    width: 250px; /* 單張圖片寬度 */
     height: 200px;
     object-fit: cover;
 }
 
-/* 滑動按鈕 */
+/* 按鈕樣式 */
 .slider-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
-    padding: 8px;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 4px;
 }
 
 .prev {
@@ -185,4 +183,11 @@ footer {
 
 .next {
     right: 10px;
+}
+
+/* Footer 樣式 */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px 0;
 }
