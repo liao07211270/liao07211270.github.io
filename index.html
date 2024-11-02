@@ -227,9 +227,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script>
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        };
 
         function showSubmitMessage(event) {
             event.preventDefault(); // 阻止表單的預設提交行為
@@ -242,6 +239,7 @@
             }, 2000); // 1000毫秒後隱藏
 
             document.getElementById('message').value = '';
+            return false;
         }
 
         // 回到頂端按鈕邏輯
@@ -258,6 +256,9 @@
 
         backToTopBtn.onclick = function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+         window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
         };
     </script>
 </body>
