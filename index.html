@@ -226,34 +226,35 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-     <script>
-        function showSubmitMessage(event) {
-            event.preventDefault(); // 阻止表單的預設提交行為
-            const message = document.getElementById('submit-message');
-            message.style.display = 'block';
+<script>
+    function showSubmitMessage(event) {
+        event.preventDefault(); // Prevents the form's default submission behavior
+        const message = document.getElementById('submit-message');
+        message.style.display = 'block'; // Display the message
 
-            setTimeout(() => {
-                message.style.display = 'none';
-            }, 2000);
+        // Hide the message after 2 seconds
+        setTimeout(() => {
+            message.style.display = 'none';
+        }, 2000);
 
-            document.getElementById('message').value = '';
-            return false;
+        // Clear the textarea after submission
+        document.getElementById('message').value = '';
+    }
+
+    // Back-to-top button logic
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    window.onscroll = function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
         }
+    };
 
-        // 回到頂端按鈕邏輯
-        const backToTopBtn = document.getElementById('backToTopBtn');
-
-        window.onscroll = function() {
-            if (window.scrollY > 300) {
-                backToTopBtn.style.display = 'flex';
-            } else {
-                backToTopBtn.style.display = 'none';
-            }
-        };
-
-        backToTopBtn.onclick = function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-    </script>
+    backToTopBtn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+</script>
 </body>
 </html>
