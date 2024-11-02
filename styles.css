@@ -51,9 +51,6 @@ main {
     border-radius: 8px;
 }
 
-#contact {
-    margin-top: 100px; /* 您可以調整此數值來增加距離 */
-}
 
 .menu-section {
     margin-bottom: 60px;
@@ -245,6 +242,18 @@ form button:hover {
     background-color: #e0b030;
 }
 
+
+#hours {
+    margin-bottom: 60px; /* 調整「營業時間」的下方間距 */
+}
+
+#location {
+    margin-bottom: 80px; /* 調整「我們的位置」的下方間距 */
+}
+
+#contact {
+    margin-top: 100px; /* 「聯絡我們」的上方間距 */
+}
 
 /* Footer 樣式 */
 footer {
