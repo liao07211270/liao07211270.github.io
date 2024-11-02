@@ -206,6 +206,7 @@ form {
 form label {
     font-size: 1.2em;
     margin-bottom: 10px;
+     font-family: 'Sawarabi Mincho', serif;
 }
 
 form textarea {
@@ -221,7 +222,7 @@ form button {
     width: 150px;
     padding: 5px 10px;
     background-color: #ba892f;
-    font-family: 'Playfair Display', serif; 
+    font-family: 'Sawarabi Mincho', serif; 
     color: #333;
     font-size: 1em;
     border: none;
