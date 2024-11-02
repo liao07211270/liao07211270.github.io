@@ -40,11 +40,7 @@ $(document).ready(function() {
         interval = setInterval(nextImage, 3000); // 恢復自動播放
     });
 });
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
 
-<script>
-    function showSubmitMessage(event) {
-        event.preventDefault(); // 阻止表單的預設提交行為
-        const message = document.getElementById('submit-message');
-        message.style.display = 'block'; // 顯示訊息
-    }
-</script>
