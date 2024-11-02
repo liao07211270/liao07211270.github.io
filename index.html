@@ -122,13 +122,18 @@
                     <span class="map-description">到 Google 地圖查看位置</span>
                 </div>
             </a>
-        </section>
-
         <section id="contact">
-            <h2>聯絡我們</h2>
-            <p>聯絡電話：0900-000-449</p>
-            <p>電子郵件：restaurant@gmail.com</p>
-        </section>
+    <h2>聯絡我們</h2>
+    <p>聯絡電話：0900-000-449</p>
+    <p>電子郵件：restaurant@gmail.com</p>
+
+    <!-- 新增的聯絡表單 -->
+    <form action="your-server-endpoint" method="POST">
+        <label for="message">留言:</label>
+        <textarea id="message" name="message" rows="5" placeholder="請在此輸入您的訊息..." required></textarea>
+        <button type="submit">發送消息</button>
+    </form>
+</section>
     </main>
 
     <footer>
