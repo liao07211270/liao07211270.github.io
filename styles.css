@@ -269,24 +269,41 @@ label {
     margin-top: 90px; /* 「聯絡我們」的上方間距 */
 }
 
+/* 回到頂端按鈕樣式 */
 #backToTopBtn {
+    display: none; /* 預設隱藏 */
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;                /* 預設隱藏按鈕 */
-    background-color: #8a9aab;    /* 按鈕背景顏色 */
-    color: white;                 /* 按鈕文字顏色 */
-    border: none;                 /* 去除邊框 */
-    padding: 10px 15px;           /* 按鈕內間距 */
-    border-radius: 5px;           /* 圓角邊框 */
-    cursor: pointer;              /* 滑鼠指標樣式 */
-    font-size: 14px;              /* 字體大小 */
-    z-index: 1000;                /* 層級確保在最上層 */
+    bottom: 30px; /* 距離底部位置 */
+    right: 30px; /* 距離右邊位置 */
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0; /* 背景色 */
+    border-radius: 50%; /* 圓形 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* 陰影 */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #333; /* 文字顏色 */
+    text-align: center;
 }
 
-#backToTopBtn:hover {
-    background-color: #0056b3;    /* 滑鼠懸停時的背景顏色 */
+/* 按鈕內的三角形圖標 */
+#backToTopBtn:before {
+    content: '▲';
+    font-size: 20px;
+    display: block;
+    color: #333; /* 三角形顏色 */
 }
+
+#backToTopBtn span {
+    font-size: 10px;
+    color: #333;
+    display: block;
+}
+
 
 
 /* Footer 樣式 */
