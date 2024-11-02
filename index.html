@@ -149,5 +149,18 @@
             window.scrollTo(0, 0);
         };
     </script>
+    <script>
+    function showSubmitMessage(event) {
+        event.preventDefault(); // 阻止表單的預設提交行為
+        const message = document.getElementById('submit-message');
+        message.style.display = 'block'; // 顯示訊息
+
+        // 設置計時器，在一秒後隱藏訊息
+        setTimeout(() => {
+            message.style.display = 'none'; // 隱藏訊息
+        }, 1000); // 1000毫秒後隱藏
+    }
+</script>
+
 </body>
 </html>
