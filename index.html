@@ -251,13 +251,9 @@
 
         document.getElementById('message').value = '';
     }
-</script>
-        <button id="backToTopBtn">回到頂端</button>
-            document.getElementById('message').value = '';
-        }
 
-        // 回到頂端按鈕邏輯
-        const backToTopBtn = document.getElementById('backToTopBtn');
+         const backToTopBtn = document.getElementById('backToTopBtn');
+
         window.onscroll = function() {
             // 當滾動超過300px時顯示按鈕
             if (window.scrollY > 300) {
@@ -266,6 +262,7 @@
                 backToTopBtn.style.display = 'none';
             }
         };
+
         backToTopBtn.onclick = function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
