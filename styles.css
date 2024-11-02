@@ -18,7 +18,7 @@ header {
 }
 
 header h1 {
-    font-size: 5em;
+    font-size: 20em;
     margin: 0;
 }
 
@@ -243,20 +243,20 @@ form button:hover {
 }
 
 #menu {
-    margin-bottom: 80px; /* 調整「營業時間」的下方間距 */
+    margin-bottom: 90px; /* 調整「營業時間」的下方間距 */
 }
 
 
 #hours {
-    margin-bottom: 60px; /* 調整「營業時間」的下方間距 */
+    margin-bottom: 90px; /* 調整「營業時間」的下方間距 */
 }
 
 #location {
-    margin-bottom: 80px; /* 調整「我們的位置」的下方間距 */
+    margin-bottom: 90px; /* 調整「我們的位置」的下方間距 */
 }
 
 #contact {
-    margin-top: 100px; /* 「聯絡我們」的上方間距 */
+    margin-top: 90px; /* 「聯絡我們」的上方間距 */
 }
 
 /* Footer 樣式 */
