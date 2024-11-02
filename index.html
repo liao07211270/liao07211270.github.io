@@ -27,7 +27,6 @@
             color: #333; /* 文字顏色 */
             text-align: center;
         }
-
         /* 按鈕內的三角形圖標 */
         #backToTopBtn:before {
             content: '▲';
@@ -35,7 +34,6 @@
             display: block;
             color: #333; /* 三角形顏色 */
         }
-
         #backToTopBtn span {
             font-size: 10px;
             color: #333;
@@ -199,12 +197,12 @@
                     <span class="map-description">到 Google 地圖查看位置</span>
                 </div>
             </a>
-            
+
         <section id="contact">
             <h2>聯絡我們</h2>
             <p>聯絡電話：0900-000-449</p>
             <p>電子郵件：restaurant@gmail.com</p>
-    
+
         <!-- 新增的聯絡表單 -->
        <form action="#" method="GET" onsubmit="showSubmitMessage(event)">
         <label for="message">留言:</label>
@@ -225,30 +223,41 @@
     <div id="backToTopBtn">
         <span>TOP</span>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script>
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         };
+    </script>
+    <script>
+    function showSubmitMessage(event) {
+        event.preventDefault(); // 阻止表單的預設提交行為
+        const message = document.getElementById('submit-message');
+        message.style.display = 'block'; // 顯示訊息
 
+        // 設置計時器，在一秒後隱藏訊息
+        setTimeout(() => {
+            message.style.display = 'none'; // 隱藏訊息
+        }, 2000); // 1000毫秒後隱藏
         function showSubmitMessage(event) {
             event.preventDefault(); // 阻止表單的預設提交行為
             const message = document.getElementById('submit-message');
             message.style.display = 'block'; // 顯示訊息
-
             // 設置計時器，在一秒後隱藏訊息
             setTimeout(() => {
                 message.style.display = 'none'; // 隱藏訊息
             }, 2000); // 1000毫秒後隱藏
 
+        document.getElementById('message').value = '';
+    }
+</script>
+        <button id="backToTopBtn">回到頂端</button>
             document.getElementById('message').value = '';
         }
 
         // 回到頂端按鈕邏輯
         const backToTopBtn = document.getElementById('backToTopBtn');
-
         window.onscroll = function() {
             // 當滾動超過300px時顯示按鈕
             if (window.scrollY > 300) {
@@ -257,44 +266,9 @@
                 backToTopBtn.style.display = 'none';
             }
         };
-
         backToTopBtn.onclick = function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
     </script>
-    <script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.slider img');
-    const totalImages = images.length;
-
-    function showImage(index) {
-        // 隱藏所有圖片
-        images.forEach(img => img.style.display = 'none');
-        
-        // 只顯示指定的圖片
-        images[index].style.display = 'block';
-    }
-
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % totalImages; // 獲取下一張圖片的索引
-        showImage(currentIndex);
-    }
-
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages; // 獲取上一張圖片的索引
-        showImage(currentIndex);
-    }
-
-    // 顯示初始圖片
-    showImage(currentIndex);
-
-    // 設定按鈕點擊事件
-    document.querySelector('.next').addEventListener('click', nextImage);
-    document.querySelector('.prev').addEventListener('click', prevImage);
-
-    // 自動輪播，設置每 3 秒切換一次圖片
-    setInterval(nextImage, 3000);
-</script>
-
 </body>
 </html>
