@@ -259,6 +259,26 @@ form button:hover {
     margin-top: 90px; /* 「聯絡我們」的上方間距 */
 }
 
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;                /* 預設隱藏按鈕 */
+    background-color: #8a9aab;    /* 按鈕背景顏色 */
+    color: white;                 /* 按鈕文字顏色 */
+    border: none;                 /* 去除邊框 */
+    padding: 10px 15px;           /* 按鈕內間距 */
+    border-radius: 5px;           /* 圓角邊框 */
+    cursor: pointer;              /* 滑鼠指標樣式 */
+    font-size: 14px;              /* 字體大小 */
+    z-index: 1000;                /* 層級確保在最上層 */
+}
+
+#backToTopBtn:hover {
+    background-color: #0056b3;    /* 滑鼠懸停時的背景顏色 */
+}
+
+
 /* Footer 樣式 */
 footer {
     text-align: center;
