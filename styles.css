@@ -202,9 +202,6 @@ form {
     display: flex;
     flex-direction: column;
 }
-section {
-    margin-bottom: 200px;
-}
 
 form label {
     font-size: 1.2em;
