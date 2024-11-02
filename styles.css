@@ -52,7 +52,7 @@ main {
 }
 
 section {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .menu-section {
@@ -201,6 +201,9 @@ form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+}
+section {
+    margin-bottom: 200px;
 }
 
 form label {
