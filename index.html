@@ -129,10 +129,10 @@
         <!-- 新增的聯絡表單 -->
        <form action="#" method="GET" onsubmit="showSubmitMessage(event)">
         <label for="message">留言:</label>
-        <textarea id="message" name="message" rows="5" placeholder="請在此輸入您的訊息..."></textarea>
+        <textarea id="message" name="message" rows="5" placeholder="跟我們說些什麼...?"></textarea>
         <button type="submit">發送消息</button>
     </form>
-    <p id="submit-message" style="display: none; color: green; font-weight: bold;">您寶貴的想法我們已經知道了</p>
+    <p id="submit-message" style="display: none; color: white; font-weight: bold;">感謝您提供寶貴的建議!!!</p>
 
 
         </section>
@@ -158,7 +158,7 @@
         // 設置計時器，在一秒後隱藏訊息
         setTimeout(() => {
             message.style.display = 'none'; // 隱藏訊息
-        }, 1000); // 1000毫秒後隱藏
+        }, 1500); // 1000毫秒後隱藏
     }
 </script>
 
