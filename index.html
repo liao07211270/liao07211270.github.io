@@ -241,20 +241,7 @@
         document.getElementById('message').value = '';
     }
 
-    // Back-to-top button logic
-    const backToTopBtn = document.getElementById('backToTopBtn');
 
-    window.onscroll = function() {
-        if (window.scrollY > 300) {
-            backToTopBtn.style.display = 'flex';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    };
-
-    backToTopBtn.onclick = function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
 </script>
 </body>
 </html>
