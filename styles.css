@@ -31,16 +31,19 @@ nav ul {
 }
 
 nav ul li a {
-    font-family: 'Noto Serif Traditional Chinese', sans-serif;
-    font-size: 1.2em;
-    color: #ddd;
+    display: inline-block;
+    font-family: 'ZCOOL KuaiLe', serif; 
+    color: #fff; /* 依照你的網站設計調整文字顏色 */
     text-decoration: none;
-    transition: color 0.3s;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, color 0.3s ease; /* 添加平滑過渡效果 */
 }
 
 nav ul li a:hover {
-    color: #fff;
+    transform: scale(1.1); /* 當滑過時放大 */
+    color: #e6deb3; /* 可以改變顏色以突出效果 (此處為金黃色) */
 }
+
 
 /* Main 區域樣式 */
 main {
