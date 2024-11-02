@@ -52,7 +52,7 @@ main {
 }
 
 section {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 .menu-section {
@@ -218,6 +218,7 @@ form textarea {
 
 form button {
     margin-top: 15px;
+    width: 150px;
     padding: 5px 10px;
     background-color: #ba892f;
     color: #333;
