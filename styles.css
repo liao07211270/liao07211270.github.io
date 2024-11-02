@@ -221,6 +221,7 @@ form button {
     width: 150px;
     padding: 5px 10px;
     background-color: #ba892f;
+    font-family: 'Playfair Display', serif; 
     color: #333;
     font-size: 1em;
     border: none;
@@ -228,6 +229,16 @@ form button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+#submit-message {
+    display: none; /* 保持原有隱藏樣式 */
+    color: white; /* 字體顏色 */
+    font-weight: bold; /* 字體粗細 */
+    font-family: 'Playfair Display', serif; /* 更改字形，這裡選擇了 Playfair Display 字型 */
+    font-size: 1.5em; /* 調整字體大小 */
+    text-align: center; /* 文字居中 */
+}
+
 
 form button:hover {
     background-color: #e0b030;
