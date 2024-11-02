@@ -6,6 +6,42 @@
     <title>不嘻西餐廳</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+     <style>
+        /* 回到頂端按鈕樣式 */
+        #backToTopBtn {
+            display: none; /* 預設隱藏 */
+            position: fixed;
+            bottom: 30px; /* 距離底部位置 */
+            right: 30px; /* 距離右邊位置 */
+            width: 50px;
+            height: 50px;
+            background-color: #f0f0f0; /* 背景色 */
+            border-radius: 50%; /* 圓形 */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* 陰影 */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #333; /* 文字顏色 */
+            text-align: center;
+        }
+
+        /* 按鈕內的三角形圖標 */
+        #backToTopBtn:before {
+            content: '▲';
+            font-size: 20px;
+            display: block;
+            color: #333; /* 三角形顏色 */
+        }
+
+        #backToTopBtn span {
+            font-size: 10px;
+            color: #333;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -185,28 +221,46 @@
         <p>© 2024 [不嘻西餐廳]. 保留所有權利。</p>
     </footer>
 
+     <!-- 回到頂端按鈕 -->
+    <div id="backToTopBtn">
+        <span>TOP</span>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script>
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         };
+
+        function showSubmitMessage(event) {
+            event.preventDefault(); // 阻止表單的預設提交行為
+            const message = document.getElementById('submit-message');
+            message.style.display = 'block'; // 顯示訊息
+
+            // 設置計時器，在一秒後隱藏訊息
+            setTimeout(() => {
+                message.style.display = 'none'; // 隱藏訊息
+            }, 2000); // 1000毫秒後隱藏
+
+            document.getElementById('message').value = '';
+        }
+
+        // 回到頂端按鈕邏輯
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        window.onscroll = function() {
+            // 當滾動超過300px時顯示按鈕
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'flex';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        };
+
+        backToTopBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
     </script>
-    <script>
-    function showSubmitMessage(event) {
-        event.preventDefault(); // 阻止表單的預設提交行為
-        const message = document.getElementById('submit-message');
-        message.style.display = 'block'; // 顯示訊息
-
-        // 設置計時器，在一秒後隱藏訊息
-        setTimeout(() => {
-            message.style.display = 'none'; // 隱藏訊息
-        }, 2000); // 1000毫秒後隱藏
-
-        document.getElementById('message').value = '';
-    }
-</script>
-        <button id="backToTopBtn">回到頂端</button>
-
 </body>
 </html>
