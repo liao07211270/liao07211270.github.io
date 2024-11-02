@@ -235,7 +235,7 @@ form button {
     color: white; /* 字體顏色 */
     font-weight: bold; /* 字體粗細 */
     font-family: 'Playfair Display', serif; /* 更改字形，這裡選擇了 Playfair Display 字型 */
-    font-size: 1.5em; /* 調整字體大小 */
+    font-size: 1.0em; /* 調整字體大小 */
     text-align: center; /* 文字居中 */
 }
 
