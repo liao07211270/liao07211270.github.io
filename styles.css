@@ -32,7 +32,7 @@ nav ul {
 
 nav ul li a {
     font-family: 'Noto Serif Traditional Chinese', sans-serif;
-    font-size: 1.2em;
+    font-size: 2.5em;
     color: #ddd;
     text-decoration: none;
     transition: color 0.3s;
@@ -240,6 +240,10 @@ form button {
 
 form button:hover {
     background-color: #e0b030;
+}
+
+#menu {
+    margin-bottom: 80px; /* 調整「營業時間」的下方間距 */
 }
 
 
