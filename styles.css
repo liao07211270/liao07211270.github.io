@@ -203,7 +203,8 @@ form {
 form label {
     font-size: 1.2em;
     margin-bottom: 10px;
-     font-family: 'Sawarabi Mincho', serif;
+    font-weight: bold;
+    font-family: 'Sawarabi Mincho', serif;
 }
 
 form textarea {
@@ -211,6 +212,7 @@ form textarea {
     padding: 10px;
     border: 1px solid #bfb6b6;
     border-radius: 4px;
+    background-color: #bdbab5;
     resize: vertical; /* 允許垂直調整大小 */
 }
 
@@ -240,6 +242,10 @@ form button {
 
 form button:hover {
     background-color: #e0b030;
+}
+
+form label {
+    margin-bottom: 120px; /* 調整「營業時間」的下方間距 */
 }
 
 #about {
