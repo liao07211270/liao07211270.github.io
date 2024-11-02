@@ -44,3 +44,25 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
+// 取得按鈕元素
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+// 監聽滾動事件
+window.onscroll = function() {
+    // 當滾動距離超過 200px 時顯示按鈕
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+// 點擊按鈕回到頂端
+backToTopBtn.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"    // 平滑回到頂端
+    });
+};
+
+
