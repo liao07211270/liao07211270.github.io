@@ -262,5 +262,39 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
     </script>
+    <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.slider img');
+    const totalImages = images.length;
+
+    function showImage(index) {
+        // 隱藏所有圖片
+        images.forEach(img => img.style.display = 'none');
+        
+        // 只顯示指定的圖片
+        images[index].style.display = 'block';
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages; // 獲取下一張圖片的索引
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages; // 獲取上一張圖片的索引
+        showImage(currentIndex);
+    }
+
+    // 顯示初始圖片
+    showImage(currentIndex);
+
+    // 設定按鈕點擊事件
+    document.querySelector('.next').addEventListener('click', nextImage);
+    document.querySelector('.prev').addEventListener('click', prevImage);
+
+    // 自動輪播，設置每 3 秒切換一次圖片
+    setInterval(nextImage, 3000);
+</script>
+
 </body>
 </html>
