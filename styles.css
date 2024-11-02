@@ -51,8 +51,8 @@ main {
     border-radius: 8px;
 }
 
-section {
-    margin-bottom: 100px;
+#contact {
+    margin-top: 100px; /* 您可以調整此數值來增加距離 */
 }
 
 .menu-section {
