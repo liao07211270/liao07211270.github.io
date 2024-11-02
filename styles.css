@@ -105,19 +105,23 @@ section {
 }
 
 .description {
-    display: none; /* 隱藏預設狀態 */
+    display: none; /* Default hidden state */
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
     border-radius: 4px;
     position: absolute;
-    bottom: 30px; /* 下調描述的位置 */
-    left: 10px; /* 稍微調整描述的左側距離 */
+    top: 50%; /* Center the description vertically */
+    left: 50%; /* Center the description horizontally */
+    transform: translate(-50%, -50%); /* Fine-tune the centered position */
+    max-width: 80%; /* Set a maximum width to avoid overflow */
+    text-align: center; /* Center-align the text */
 }
 
-/* Hover時顯示描述 */
+/* Show description on hover */
 .menu-item:hover .description {
-    display: block; /* 懸停時顯示描述 */
+    display: block; /* Display on hover */
 }
+
 
 /* Slider 樣式 */
 .slider-container {
