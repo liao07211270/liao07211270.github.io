@@ -112,7 +112,7 @@ section {
     position: absolute;
     top: 50%; /* Center the description vertically */
     left: 50%; /* Center the description horizontally */
-    transform: translate(-50%, -50%); /* Fine-tune the centered position */
+    transform: translate(-30%, -50%); /* Fine-tune the centered position */
     max-width: 80%; /* Set a maximum width to avoid overflow */
     text-align: center; /* Center-align the text */
 }
