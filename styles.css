@@ -242,6 +242,10 @@ form button:hover {
     background-color: #e0b030;
 }
 
+#about {
+    margin-bottom: 90px; /* 調整「營業時間」的下方間距 */
+}
+
 #menu {
     margin-bottom: 90px; /* 調整「營業時間」的下方間距 */
 }
