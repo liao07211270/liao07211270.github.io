@@ -244,9 +244,6 @@ form button:hover {
     background-color: #e0b030;
 }
 
-form label {
-    margin-top: 120px; /* 調整「營業時間」的下方間距 */
-}
 
 #about {
     margin-bottom: 90px; /* 調整「營業時間」的下方間距 */
