@@ -1,66 +1,66 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="script.js"></script>
-<script>
-    // 頁面載入後自動滾動到頂部
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    };
+$(document).ready(function() {
+    let currentIndex = 0; // 當前圖片索引
+    const images = $('.slider img'); // 獲取所有圖片
+    const totalImages = images.length; // 總圖片數
 
-    // 留言提交後顯示感謝訊息
-    function showSubmitMessage(event) {
-        event.preventDefault(); // 阻止表單預設提交行為
-        const message = document.getElementById('submit-message');
-        message.style.display = 'block'; // 顯示訊息
+    // 隱藏所有圖片
+    images.hide();
+    // 顯示第一張圖片
+    images.eq(currentIndex).show();
 
-        // 設置計時器，在2秒後隱藏訊息
-        setTimeout(() => {
-            message.style.display = 'none'; // 隱藏訊息
-        }, 2000);
-
-        document.getElementById('message').value = ''; // 清空留言輸入框
+    // 下一張圖片
+    function nextImage() {
+        images.eq(currentIndex).fadeOut(500, function() { // 隱藏當前圖片
+            currentIndex = (currentIndex + 1) % totalImages; // 更新索引
+            images.eq(currentIndex).fadeIn(500); // 顯示下一張圖片
+        });
     }
 
-    // 圖片輪播功能
-    $(document).ready(function() {
-        let currentIndex = 0; // 當前圖片索引
-        const images = $('.slider img'); // 所有圖片元素
-        const totalImages = images.length; // 圖片總數
-
-        // 顯示指定索引的圖片
-        function showImage(index) {
-            images.hide(); // 隱藏所有圖片
-            images.eq(index).show(); // 顯示當前索引的圖片
-        }
-
-        // 顯示前一張圖片
-        $('.prev').click(function() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            showImage(currentIndex);
+    // 上一張圖片
+    function prevImage() {
+        images.eq(currentIndex).fadeOut(500, function() { // 隱藏當前圖片
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages; // 更新索引
+            images.eq(currentIndex).fadeIn(500); // 顯示上一張圖片
         });
+    }
 
-        // 顯示下一張圖片
-        $('.next').click(function() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        });
+    // 自動播放圖片
+    let interval = setInterval(nextImage, 3000); // 每3秒切換一次圖片
 
-        // 初始顯示第一張圖片
-        showImage(currentIndex);
+    // 按鈕事件
+    $('.next').on('click', function() {
+        clearInterval(interval); // 暫停自動播放
+        nextImage();
+        interval = setInterval(nextImage, 3000); // 恢復自動播放
     });
 
-    // 回到頂端按鈕功能
-    const backToTopBtn = document.getElementById('backToTopBtn');
+    $('.prev').on('click', function() {
+        clearInterval(interval); // 暫停自動播放
+        prevImage();
+        interval = setInterval(nextImage, 3000); // 恢復自動播放
+    });
+});
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
 
-    window.onscroll = function() {
-        if (window.scrollY > 300) { // 當滾動超過300px時顯示按鈕
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    };
+// 取得按鈕元素
+const backToTopBtn = document.getElementById("backToTopBtn");
 
-    backToTopBtn.onclick = function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-</script>
+// 監聽滾動事件
+window.onscroll = function() {
+    // 當滾動距離超過 200px 時顯示按鈕
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
 
+// 點擊按鈕回到頂端
+backToTopBtn.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"    // 平滑回到頂端
+    });
+};
